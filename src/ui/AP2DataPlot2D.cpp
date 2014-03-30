@@ -173,7 +173,7 @@ void AP2DataPlot2D::plotMouseMove(QMouseEvent *evt)
 
         }
     }
-    QToolTip::showText(QPoint(evt->pos().x() + m_plot->x(),evt->pos().y()+m_plot->y()),newresult);
+    QToolTip::showText(evt->screenPos().toPoint(), newresult);
 }
 
 void AP2DataPlot2D::axisDoubleClick(QCPAxis* axis,QCPAxis::SelectablePart part,QMouseEvent* evt)
